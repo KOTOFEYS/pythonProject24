@@ -1,0 +1,42 @@
+{% extends "temp_dir/base.html" %}
+
+
+
+{% block title %}
+    {{ block.super }}
+    {{ title }}
+{% endblock %}
+
+{% block menu %}
+    {{ block.super }}
+    
+    
+{% endblock %}
+
+{% block content %}
+    {{ block.super }}
+
+
+    <form  method="post" action="" id="reg_form">
+        {% csrf_token %}
+<ul class="reg_list">
+<li>       
+    <div class="reg_title">Введите ваше имя:</div> 
+    <input class="reg_input" type="text" name="username" maxlength="30" required>
+</li>
+ <li>
+    <div class="reg_title">Введите свой номер телефона:</div>
+    <input class="reg_input" type="int" name="num_tel" maxlength="50" required>
+</li>
+<div id="reg_control">
+    <div><input class="reg_button" type="submit" value="Зарегистрироваться"></div> 
+</div>
+
+</ul>
+</form>
+
+
+{% endblock %}
+
+ 
+

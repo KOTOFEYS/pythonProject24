@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+
+
+{% block title %}
+    {{ super() }}
+    {{ title }}
+{% endblock %}
+
+{% block menu %}
+    {{ super() }}
+    
+    
+{% endblock %}
+
+{% block content %}
+    {{ super() }}
+
+    <form action="reg" method="post" id="reg_form">
+<ul class="reg_list">
+<li>       
+    <div class="reg_title">Введите ваше имя:</div> 
+    <input class="reg_input" type="text" name="name" maxlength="30" required>
+</li>
+ <li>
+    <div class="reg_title">Введите свой номер телефона:</div>
+    <input class="reg_input" type="int" name="num_tel"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength="20" required>
+</li>
+<div id="reg_control">
+    <div><input class="reg_button" type="submit" value="Зарегистрироваться"></div> 
+</div>
+
+</ul>
+</form>
+
+
+{% endblock %}
+
+ 
+

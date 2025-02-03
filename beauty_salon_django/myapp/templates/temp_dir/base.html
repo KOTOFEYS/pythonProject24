@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link type="text/css" rel="stylesheet" href = "{% static 'css/styles.css' %}"/>
+    <meta charset="UTF-8">
+    <title>{% block title %}BEAUTY-{% endblock %}</title>
+</head>
+
+<body>
+    {% block menu %}
+        <ul class="menu">
+            {% for i in menu2 %}
+                <li><a href="{{ i.url }}">{{ i.name }}</a></li>
+                
+            {% endfor %}
+        </ul>  
+    {% endblock menu %}
+    {% block content %} 
+        </ul>
+        <div class="clear"></div>
+        <div class="content">
+        {% block pagename %}
+        <h1 align=center>{{ text }}</h1>  
+        {% endblock pagename %}
+        <h1 align=center>{{ text1 }}</h1>   
+    {% endblock content %}
+    </div>
+  
+      
+    <hr class="line">
+    <footer>
+        <p>Наш адрес: г.Воронеж, бульвар Победы. дом 23.</p>
+        <p>2024 My site</p>
+    </footer>
+
+</body>
+</html>

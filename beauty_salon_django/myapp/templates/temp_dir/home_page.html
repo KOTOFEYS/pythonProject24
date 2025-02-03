@@ -1,0 +1,25 @@
+{% extends "temp_dir/base.html" %}
+
+{% block pagename %}
+    {{ block.super }}
+
+{% endblock %}
+
+{% block title %}
+    {{ block.super }}
+    {{ title }}
+{% endblock %}
+
+{% block menu %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    {{ block.super }}
+    {% for i in menu %}
+        <h3><li>{{ i }}</li><h3>   
+    {% endfor %}
+        <a href="/prices"><div><input class="reg_button" type="submit" value="Смотреть прайс"></div></a>
+
+
+{% endblock %}

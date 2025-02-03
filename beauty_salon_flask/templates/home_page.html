@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block pagename %}
+    {{ super() }}
+    <p><a href="{{ url_for('admin.index') }}">Админ панель</a></p>
+{% endblock %}
+
+{% block title %}
+    {{ super() }}
+    {{ title }}
+{% endblock %}
+
+{% block menu %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+    {{ super() }}    
+    {% for i in menu %}
+        <h3><li>{{ i }}</li><h3>   
+    {% endfor %}
+        <a href="/prices"><div><input class="reg_button" type="submit" value="Смотреть прайс"></div></a>
+
+
+{% endblock %}
